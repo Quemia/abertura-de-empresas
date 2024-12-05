@@ -24,7 +24,7 @@ O primeiro passo é baixar o repositório na sua máquina com git ou em arquivo 
 ```shell
   $ git init
 
-  $ git clone https://gitlab.com/vox_test1/AberturaDeEmpresas.git
+  $ git clone https://github.com/Quemia/abertura-de-empresas.git
   $ cd AberturaDeEmpresas
 
 ```
