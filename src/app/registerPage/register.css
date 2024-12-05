@@ -1,0 +1,72 @@
+body {
+  display: block;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.dataInput,
+.dataInput-2 {
+  width: 30%;
+}
+
+.dataInput-2 {
+  margin-left: 3rem;
+}
+
+.input {
+  width: 70%;
+  margin-bottom: 0;
+}
+
+.entryData {
+  width: 40%;
+}
+
+p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #4b5d6c;
+}
+
+.line {
+  border-left: 2px solid #2c88d9;
+  border-bottom: 0;
+
+  height: 65vh;
+}
+
+.btn-md {
+  margin-left: 56%;
+}
+
+@media (max-width: 992px) {
+  .content {
+    display: block;
+  }
+
+  .dataInput,
+  .dataInput-2 {
+    width: max-content;
+    margin: auto;
+  }
+
+  .line {
+    border-bottom: 0;
+    height: 3rem;
+  }
+
+  .dataInput-2 {
+    width: max-content;
+    margin: auto;
+  }
+
+  .btn-md {
+    margin-bottom: 3rem;
+    margin-left: 0;
+    padding: 0.5rem 5rem;
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "empresas": [
+    {
+      "solicitante": {
+        "ds_responsavel": "Catarina Ester da Cruz",
+        "nu_cpf": "83812080176",
+        "date_nascimento": "1984-04-19"
+      },
+      "empresa": {
+        "ds_nome_fantasia": "Diogo e Marcelo Filmagens Ltda",
+        "co_entidade_registro": 104306,
+        "co_natureza_juridica": 10021,
+        "endereco": {
+          "co_cep": 14022094,
+          "ds_logradouro": "Rua Alcino Jacinto Ramos",
+          "co_numero": "233",
+          "ds_complemento": null,
+          "ds_bairro": "Quinta da Primavera",
+          "ds_municipio": "Ribeirão Preto",
+          "co_uf": "29"
+        }
+      },
+      "id": "1"
+    },
+    {
+      "solicitante": {
+        "ds_responsavel": "Ryan Vinicius Nicolas Almeida",
+        "nu_cpf": "02494725976",
+        "date_nascimento": "1990-09-30"
+      },
+      "empresa": {
+        "ds_nome_fantasia": "Isabela e Benício Transportes Ltda",
+        "co_entidade_registro": 104308,
+        "co_natureza_juridica": 10030,
+        "endereco": {
+          "co_cep": 14022094,
+          "ds_logradouro": "Rua Francisco Nunes Villela",
+          "co_numero": "233",
+          "ds_complemento": "Apt 304",
+          "ds_bairro": "Vila dos Comerciários I",
+          "ds_municipio": "Ribeirão Preto",
+          "co_uf": "28"
+        }
+      },
+      "id": "2"
+    },
+    {
+      "id": "5cff",
+      "solicitante": {
+        "ds_responsavel": "Quemia Oliveira",
+        "nu_cpf": "616.904.460-80",
+        "date_nascimento": "1999-03-24"
+      },
+      "empresa": {
+        "ds_nome_fantasia": "Health & Care",
+        "co_entidade_registro": 104306,
+        "co_natureza_juridica": "",
+        "endereco": {
+          "co_cep": "65631080",
+          "ds_logradouro": "Rua João Joca Assunção",
+          "co_numero": "",
+          "ds_complemento": "866",
+          "ds_bairro": "Parque piauí",
+          "ds_municipio": "Timon",
+          "co_uf": "Maranhão"
+        }
+      }
+    },
+    {
+      "id": "95ec",
+      "solicitante": {
+        "ds_responsavel": "Quemia Oliveira",
+        "nu_cpf": "616.904.460-80",
+        "date_nascimento": "2024-11-02"
+      },
+      "empresa": {
+        "ds_nome_fantasia": "Health & Care",
+        "co_entidade_registro": 104305,
+        "co_natureza_juridica": "",
+        "endereco": {
+          "co_cep": "65631080",
+          "ds_logradouro": "Rua João Joca Assunção",
+          "co_numero": "",
+          "ds_complemento": "866",
+          "ds_bairro": "Paruqe piauí",
+          "ds_municipio": "Timon",
+          "co_uf": "Maranhão"
+        }
+      }
+    }
+  ],
+  "entidade-registro": [
+    {
+      "key": 104305,
+      "value": "Cartório",
+      "id": "8e6e"
+    },
+    {
+      "key": 104306,
+      "value": "Junta Comercial",
+      "id": "31db"
+    },
+    {
+      "key": 104308,
+      "value": "OAB",
+      "id": "10d8"
+    },
+    {
+      "key": 104309,
+      "value": "RFB",
+      "id": "e43b"
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+<!--  -->
+<form #forms="ngForm" (ngSubmit)="onSubmit()" class="content">
+  <div class="dataInput">
+    <div class="formGroup">
+      <h3
+        class="font-weight-bold text-secondary mb-4"
+        style="font-size: 1.5rem"
+      >
+        Dados do Solicitante
+      </h3>
+      <p class="text-monospace font-weight-bold">Responsável pela empresa*</p>
+      <input
+        type="text"
+        id="ds_responsavel"
+        [(ngModel)]="especificCompany.solicitante.ds_responsavel"
+        name="ds_responsavel"
+        class="input mb-3 form-control"
+        required
+      />
+
+      <p>CPF*</p>
+      <input
+        type="text"
+        class="input mb-3 form-control"
+        [(ngModel)]="especificCompany.solicitante.nu_cpf"
+        id="nu_cpf"
+        name="nu_cpf"
+        required
+      />
+
+      <p>Data de Nascimento*</p>
+      <input
+        type="date"
+        [(ngModel)]="especificCompany.solicitante.date_nascimento"
+        class="entryData form-control"
+        id="date_nascimento"
+        name="date_nascimento"
+        required
+      />
+    </div>
+
+    <div class="mt-5 formGroup">
+      <h3
+        class="font-weight-bold text-secondary mb-4"
+        style="font-size: 1.5rem"
+      >
+        Dados da Empresa
+      </h3>
+
+      <p>Nome Fantasia</p>
+      <input
+        type="text"
+        [(ngModel)]="especificCompany.empresa.ds_nome_fantasia"
+        class="input form-control"
+        name="ds_nome_fantasia"
+        id="ds_nome_fantasia"
+        required
+      />
+
+      <p class="mt-4">Escolha sua identidade de registro*</p>
+      <div
+        *ngFor="let entity of registrationEntities"
+        class="d-flex align-items-center mb-2"
+      >
+        <input
+          type="radio"
+          [id]="entity.value"
+          [value]="entity.key"
+          [(ngModel)]="especificCompany.empresa.co_entidade_registro"
+          name="co_entidade_registro"
+          required
+        />
+        <p class="mb-0 ml-1" style="font-weight: 400">{{ entity.value }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="dataInput-2 formGroup">
+    <div>
+      <h3 class="font-weight-bold text-secondary" style="font-size: 1.5rem">
+        Endereço da Empresa
+      </h3>
+
+      <p for="co_cep">CEP*</p>
+      <input
+        id="co_cep"
+        name="co_cep"
+        type="text"
+        class="input mb-3 form-control"
+        [(ngModel)]="especificCompany.empresa.endereco.co_cep"
+      />
+
+      <p for="ds_logradouro">Endereço*</p>
+      <input
+        id="ds_logradouro"
+        name="ds_logradouro"
+        type="text"
+        class="input mb-3 form-control"
+        [(ngModel)]="especificCompany.empresa.endereco.ds_logradouro"
+      />
+
+      <p for="ds_bairro">Bairro*</p>
+      <input
+        id="ds_bairro"
+        name="ds_bairro"
+        type="text"
+        class="input mb-3 form-control"
+        [(ngModel)]="especificCompany.empresa.endereco.ds_bairro"
+      />
+
+      <p for="ds_complemento">Complemento*</p>
+      <input
+        id="ds_complemento"
+        name="ds_complemento"
+        type="text"
+        class="input mb-3 form-control"
+        [(ngModel)]="especificCompany.empresa.endereco.ds_complemento"
+      />
+
+      <p for="ds_municipio">Cidade*</p>
+      <input
+        id="ds_municipio"
+        name="ds_municipio"
+        type="text"
+        class="input mb-3 form-control"
+        [(ngModel)]="especificCompany.empresa.endereco.ds_municipio"
+      />
+
+      <p for="co_uf">Estado*</p>
+      <input
+        id="co_uf"
+        name="co_uf"
+        type="text"
+        class="input mb-3 form-control"
+        [(ngModel)]="especificCompany.empresa.endereco.co_uf"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-md" (click)="openModal()">
+      Enviar
+    </button>
+  </div>
+</form>
+
+<!-- Comfirm Modal-->
+<div *ngIf="isModalOpen" class="modal-backdrop fade show"></div>
+<div
+  tabindex="-1"
+  class="modal fade"
+  role="dialog"
+  [ngClass]="{ show: isModalOpen }"
+  [ngStyle]="{ display: isModalOpen ? 'block' : 'none' }"
+>
+  <div
+    class="modal-dialog modal-dialog-centered"
+    role="document"
+    style="border: none"
+  >
+    <div class="modal-content">
+      <div class="modal-header" style="border: none">
+        <button
+          type="button"
+          class="close"
+          (click)="closeModal()"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center p-4 mb-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="150"
+          height="150"
+          fill="currentColor"
+          class="bi bi-check2-circle mb-4 font-weight-bold"
+          style="color: #207868; font-weight: 700"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"
+          />
+          <path
+            d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"
+          />
+        </svg>
+        <p style="font-size: 1.2rem !important" class="font-weight-bold">
+          Solicitação Cadastrada com sucesso
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
